@@ -35,8 +35,8 @@ const deleteIssue = id => {
   const issues = JSON.parse(localStorage.getItem('issues'));
   const remainingIssues = issues.filter(issue => parseInt(issue.id) !== id ) //// in this line has some correction
   localStorage.setItem('issues', JSON.stringify(remainingIssues));
-   ////////////////////////////////// this is an extra line for fixing error ////////////////////////////////////
-  document.getElementById('issuesList').style.display = 'none';
+   ////////////////////////////////// this is an extra line for fixing error[delete item] //////////////////////////
+  fetchIssues()
 }
 
 const fetchIssues = () => {
